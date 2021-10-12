@@ -245,16 +245,19 @@ function esPrimo(numero) {
   // Tu código:
    
 
-} esPrimo(7);
+} 
 
 function doWhile(numero) {
   //Implementar una función tal que vaya aumentando el valor recibido en 5 hasta un límite de 8 veces
   //Retornar el valor final.
   //Pueden usar un while o un bucle do ... while (Investigarlo si quieren hacerlo de la segunda forma)
   // Tu código:
-  do {
-    var i = i + 5;
-  }
+      var aumento = 0;
+      while (aumento < 8) {
+          numero = numero + 5;
+          aumento ++;
+      }
+      return numero;
 
 }
 
