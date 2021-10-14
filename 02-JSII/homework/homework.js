@@ -108,6 +108,7 @@ function mesesDelAño(array) {
   // "Enero", "Marzo" y "Noviembre", guardarlo en nuevo array y retornarlo.
   // Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
   // Tu código:
+  var ene = array.indexOf("enero");
 
 }
 
@@ -130,6 +131,13 @@ function continueStatement(numero) {
   // y se continua con la siguiente iteración
   // Pista: usá el statement 'continue'
   // Tu código:
+  var conjunto = [];
+  for(var i = 0; i < 10; i++){
+    numero = numero + 2;
+    if(i === 5) continue;
+    conjunto.push(numero);
+  }
+  return conjunto;
   
 }
 
@@ -139,6 +147,13 @@ function crearGato(nombre, edad) {
   // Agrega un método (funcion) llamado "meow" que devuelva el string "Meow!"
   // Devuelve el objeto
   // Tu código:
+  var objetoGato = {
+    nombre: nombre,
+    edad: edad,
+    meow: function(){
+      return "Meow!";
+    }
+  }return objetoGato;
 
 }
 

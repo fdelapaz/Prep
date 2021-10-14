@@ -147,19 +147,9 @@ function esVocal(letra){
   if (letra.length !== 1){
     return "Dato incorrecto";
 } 
-if (letra === 'a'){
-  return "Es vocal";
-}else if (letra === 'e'){
-  return "Es vocal";
-}else if (letra === 'i'){
-  return "Es vocal";
-}else if (letra === 'o'){
-  return "Es vocal";
-}else if (letra === 'u'){
+if (letra === 'a' || letra === 'e' || letra === 'i' || letra === 'o' || letra === 'u'){
   return "Es vocal";
 }
-return 'Es consonante';
-
 }
 esVocal('o');
 
@@ -201,16 +191,15 @@ function colors(color) {
   switch (color) {
     case 'blue':
       return "This is blue";
-      break;
       case 'red':
         return "This is red";
-        break;
       case 'green':
         return "This is green";
-        break;
       case 'orange':
         return "This is orange";
-  } return "Color not found";
+      default:
+        return "Color not found";  
+  } 
 
 } colors('blue');
 
@@ -243,8 +232,16 @@ function esPrimo(numero) {
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
   // Tu código:
-   
+  if (numero === 0 || numero === 1){
+    return false;  }
 
+  for (var i = 2 ; i < numero; i++ ) {
+    if(numero% i === 0){
+      return false;
+    }
+    
+  }
+   return true;
 } 
 
 function doWhile(numero) {
